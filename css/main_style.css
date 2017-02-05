@@ -1,0 +1,10 @@
+body {
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: rgb(255,255,255);
+}
+.text-emp {
+    font-style: italic;
+    text-decoration: underline;
+}
