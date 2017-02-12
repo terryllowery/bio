@@ -6,6 +6,9 @@ font-family: 'IM Fell French Canon SC', serif;
 
 /* Background images */
 body {
+
+}
+.about-container {
     background: url("../img/bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -o-background-size: cover;
