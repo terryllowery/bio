@@ -6,6 +6,9 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main_style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cardo|IM+Fell+French+Canon+SC|Orbitron" rel="stylesheet">
+    <link href="css/prism-atom-dark.css" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/prism.ruby.js"></script>
 </head>
 <body>
     <div class="about-container">
@@ -34,11 +37,73 @@
         </p>
     </div>
     <div class="box">
-        Right
+        <pre>
+            <code class="language-ruby">
+puts "Enter temperature in celsius:"
+
+celsius = gets().chomp()
+celsius = celsius.to_f
+
+puts "The temp you entered is: #{celsius}"
+
+fahrenheit = celsius * 9 / 5 + 32
+
+puts "The temp in fahrenheit is: #{fahrenheit}"
+            </code>
+        </pre>
+
+
     </div>
     <br class="clear_floats" />
     <div class="box">
-        Left
+        <pre>
+            <code class="language-ruby">
+def return_ordinal(num, value)
+  if value == 11
+    ord = 'th'
+    return ord
+  elsif value == 12
+    ord = 'th'
+    return ord
+  elsif value == 13
+    ord = 'th'
+    return ord
+  end
+  if num == 1
+    ord = 'st'
+  elsif num == 2
+    ord = 'nd'
+  elsif num == 3
+    ord = 'rd'
+  else
+    ord = 'th'
+  end
+  return ord
+end
+
+def return_ones_num(num)
+  ones_num = num % 10
+  return ones_num
+end
+
+def get_num_from_user()
+  puts("Enter value:")
+  user_val = gets.chomp()
+  user_val = user_val.to_i
+  return user_val
+end
+
+def display_message(value)
+  ones_val = return_ones_num(value)
+  ord = return_ordinal(ones_val, value)
+  puts("That's the #{value.to_s + ord.to_s } item!")
+end
+
+value = get_num_from_user()
+display_message(value)
+
+            </code>
+        </pre>
     </div>
     <div class="box">
         <h4>Ordinal Challenge</h4>
@@ -59,7 +124,41 @@
         </p>
     </div>
     <div class="box">
-        Right
+        <pre>
+            <code class="language-ruby">
+def get_num_of_times()
+  puts("Enter how many times you wan't to see:")
+  times = gets().chomp()
+  times = times.to_i
+  return times
+end
+
+def return_foo_bar(num)
+  if num % 3 == 0
+    rtn_string = 'foo'
+  end
+  if num % 5 == 0
+    if rtn_string == 'foo'
+      rtn_string = rtn_string + 'bar'
+    else
+      rtn_string = 'bar'
+    end
+  end
+  if rtn_string.nil?
+    rtn_string = num.to_s
+  end
+  return rtn_string
+end
+
+
+
+num_tries = get_num_of_times()
+
+num_tries.times do |num|
+  puts(return_foo_bar(num + 1))
+end
+            </code>
+        </pre>
     </div>
     <br class="clear_floats" />
 </body>
